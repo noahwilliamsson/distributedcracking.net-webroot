@@ -1,0 +1,35 @@
+This is the frondend code for the distributedcracking.net software.
+
+Configuration is done in the file called 'config.php'
+The directory 'temp' needs to be writeable by the user running Apache (or PHP).
+The API the client is communicating with is located under 'api/'.
+
+
+A LAMP-installation is required and you'll probably want to configure Apache 
+in a fashion similar to the one below.
+
+<VirtualHost *>
+        ServerAdmin     admin@EXAMPLE.NET
+        ServerName      EXAMPLE.NET
+
+        ErrorLog        /opt/logs/distributedcracking.net-insecure-errorlog
+        CustomLog       /opt/logs/distributedcracking.net-insecure-combined combined
+        LogLevel        notice
+
+        RewriteEngine on
+        RewriteRule ^/(.*)$     https://distributedcracking.net/$1      [L,R=302]
+
+        DocumentRoot    /opt/distributedcracking.net/webroot/
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /opt/distributedcracking.net/webroot/>
+                AddDefaultCharset utf-8
+                Options -All
+                AllowOverride AuthConfig Indexes Options
+                Order allow,deny
+                allow from all
+        </Directory>
+</VirtualHost>
+

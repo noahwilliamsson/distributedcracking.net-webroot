@@ -1,0 +1,13 @@
+Web GUI
+=======
+* Jobs
+  - Manage job sharing, sharing and unsharing
+  - Edit job
+
+* Groups
+  - Implement invitation with jobcookie (md5 userid + jobcookie)
+
+* Settings
+  - Removal of account
+
+

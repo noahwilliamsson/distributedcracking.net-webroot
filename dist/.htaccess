@@ -1,0 +1,8 @@
+AuthUserFile    /opt/distributedcracking.net/.htaccess
+AuthName        "Authentication required"
+AuthType        Basic
+<Limit GET>
+        Require valid-user
+</Limit>
+Options +Indexes
+IndexOptions FancyIndexing
