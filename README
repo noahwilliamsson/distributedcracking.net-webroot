@@ -1,3 +1,6 @@
+Copyright (C) 2004-2009 Noah Williamsson <noah.williamsson at gmail.com>
+
+
 This is the frondend code for the distributedcracking.net software.
 
 Configuration is done in the file called 'config.php'
